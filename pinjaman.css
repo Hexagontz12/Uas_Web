@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #2c3e50, #bdc3c7);
+    color: black;
+    display: flex;
+    flex-direction: column; 
+    overflow: hidden;
+    
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header .logo {
+    display: flex;
+    align-items: center;
+    animation: fadeInLogo 1s ease-out;
+}
+
+.header .logo img {
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 20px;
+}
+
+.header .logo span {
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.nav {
+    display: flex;
+    gap: 25px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.nav a:hover {
+    color: #ffdd57;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle div {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+}
+
+.nav.active {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #203a43;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 20px 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto; /* Menjaga margin atas dan bawah */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    display: flex; /* Menambahkan display flex */
+    flex-direction: column; /* Mengatur arah flex menjadi kolom */
+    align-items: center; /* Menyelaraskan item ke tengah */
+    justify-content: center; /* Menyelaraskan item ke tengah */
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: black;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2rem;
+    color: black;
+    margin-bottom: 30px;
+}
+
+input, select {
+    padding: 10px;
+    font-size: 1.2rem;
+    width: 80%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+button {
+    padding: 15px 30px;
+    background-color:rgb(0, 66, 133);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: rgb(0, 89, 178);
+}
+
+.loan-info {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.alert {
+    background-color: #f44336;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    display: none;
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    color: white;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .header {
+        align-items: flex-start;
+    }
+
+    .nav {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    input, select {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo img {
+        height: 30px;
+    }
+
+    .logo span {
+        font-size: 1.5rem;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    button {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+}

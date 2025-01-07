@@ -1,0 +1,219 @@
+/* Basic Reset */
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+   font-family: 'Arial', sans-serif;
+   background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+   color: white;
+   color: #fff;
+   line-height: 1.6;
+   display: flex;
+   justify-content: center;
+   align-items: flex-start;  /* Mengubah align-items menjadi flex-start untuk menempatkan konten di atas */
+   height: 100vh;
+   margin: 0;
+   padding: 20px;
+}
+
+/* Container Styling */
+.container {
+   max-width: 800px;
+   width: 100%;
+   background-color: rgba(255, 255, 255, 0.1);
+   padding: 30px;
+   border-radius: 10px;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+   animation: fadeIn 1.5s ease-in-out;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   gap: 20px;
+}
+
+/* Transaksi Styling */
+.transaksi {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   max-height: 300px;
+}
+
+.transaksi img {
+   max-width: 100%;
+   height: auto;
+   max-height: 150px;
+   object-fit: contain;
+}
+
+/* Header Section */
+header h1 {
+   text-align: center;
+   font-size: 2.5em;
+   margin-bottom: 20px;
+   animation: slideIn 1s ease-out;
+}
+
+header p {
+   text-align: center;
+   font-size: 1.1em;
+   margin-bottom: 30px;
+   opacity: 0;
+   animation: fadeInText 2s ease-in-out 0.5s forwards;
+}
+
+/* CTA Button Styling */
+.cta {
+   text-align: center;
+}
+
+.cta button {
+   padding: 12px 25px;
+   background: #2c5364;
+   color: white;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   font-size: 1.2em;
+   transition: background-color 0.3s;
+}
+
+.cta button:hover {
+   background-color: #357AB7;
+}
+
+/* Features Section Styling */
+.features {
+   margin-top: 40px;
+}
+
+.features h2 {
+   text-align: center;
+   font-size: 2em;
+   margin-bottom: 20px;
+   animation: slideIn 1s ease-out 0.5s;
+}
+
+.features ul {
+   list-style-type: none;
+   padding: 0;
+   text-align: left;
+   margin: 0;
+   font-size: 1.1em;
+}
+
+.features li {
+   margin: 20px 0;
+   opacity: 0;
+   animation: fadeInText 2s ease-in-out 1s forwards;
+}
+
+/* Login Link Section */
+.login-link {
+   text-align: center;
+}
+
+.login-link p {
+   font-size: 1.1em;
+}
+
+.login-link a {
+   color: #4A90E2;
+   text-decoration: none;
+   font-weight: bold;
+}
+
+.login-link a:hover {
+   color: #357AB7;
+   text-decoration: underline;
+}
+
+/* Back CTA Section */
+.cta-back {
+   text-align: center;
+   margin-top: 30px;
+}
+
+.cta-back button {
+   padding: 12px 25px;
+   background: #2c5364;
+   color: white;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   font-size: 1.2em;
+   transition: background-color 0.3s;
+}
+
+.cta-back button:hover {
+   background-color:  #25414e;
+}
+
+/* Animations */
+@keyframes fadeIn {
+   0% { opacity: 0; transform: translateY(20px); }
+   100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+   0% { transform: translateX(-50%); opacity: 0; }
+   100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes fadeInText {
+   0% { opacity: 0; }
+   100% { opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+   .transaksi img {
+       max-width: 250px;
+   }
+
+   header h1 {
+       font-size: 2em;
+   }
+
+   header p {
+       font-size: 1em;
+   }
+
+   .cta button {
+       font-size: 1.1em;
+   }
+
+   .features h2 {
+       font-size: 1.8em;
+   }
+
+   .features ul {
+       font-size: 1em;
+   }
+
+   .features li {
+       font-size: 1em;
+   }
+
+   .cta-back button {
+       font-size: 1.1em;
+   }
+}
+
+@media (max-width: 480px) {
+   header h1 {
+       font-size: 1.8em;
+   }
+
+   .cta button {
+       font-size: 1.1em;
+   }
+
+   .cta-back button {
+       font-size: 1.1em;
+   }
+}

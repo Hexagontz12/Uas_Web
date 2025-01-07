@@ -1,0 +1,262 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #333, #444);
+    color: #333;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header .logo {
+    display: flex;
+    align-items: center;
+    animation: fadeInLogo 1s ease-out;
+}
+
+.header .logo img {
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 20px;
+}
+
+.header .logo span {
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.nav {
+    display: flex;
+    gap: 25px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.nav a:hover {
+    color: #ffdd57;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle div {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+}
+
+.nav.active {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #203a43;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 20px 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+}
+
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(135deg,#203a43, #2c5364);
+    color: white;
+    animation: fadeInHero 1.5s ease-out;
+}
+
+.hero img {
+    max-width: 250px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+    animation: fadeInText 1.5s ease-out 0.5s;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 25px;
+    animation: fadeInText 1.5s ease-out 0.8s;
+}
+
+.hero .cta-button {
+    padding: 15px 30px;
+    background-color: #ffdd57;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hero .cta-button:hover {
+    background-color: #ffcc00;
+    transform: translateY(-5px);
+}
+
+.back-button button {
+    padding: 15px 30px;
+    background-color: #ffdd57;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.back-button button:hover {
+    background-color: #ffcc00;
+    transform: translateY(-5px);
+}
+
+.footer {
+    text-align: center;
+    padding: 30px 0;
+    background: linear-gradient(to right, #333, #444);
+    color: #fff;
+    width: 100%;
+}
+
+.footer p {
+    margin: 0 0 10px;
+    font-size: 14px;
+}
+
+.footer a {
+    color: #1abc9c;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.footer a:hover {
+    color: #16a085;
+    text-decoration: underline;
+}
+
+.footer .social-icons {
+    margin-top: 10px;
+}
+
+.footer .social-icons a {
+    margin: 0 5px;
+    color: #fff;
+    font-size: 20px;
+    transition: transform 0.3s;
+}
+
+.footer .social-icons a:hover {
+    color: #1abc9c;
+    transform: scale(1.2);
+}
+
+@keyframes fadeInLogo {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInHero {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Media Queries untuk Responsiveness */
+@media (max-width: 768px) {
+
+    .nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .back-button button {
+        width: 100%;
+        font-size: 1em;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    .hero h1 {
+        font-size: 24px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .back-button button {
+        font-size: 0.9em;
+        padding: 8px;
+    }
+}
+
+.footer {
+    position: relative;
+}

@@ -1,0 +1,300 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #333, #444);
+    color: #333;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header .logo {
+    display: flex;
+    align-items: center;
+    animation: fadeInLogo 1s ease-out;
+}
+
+.header .logo img {
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 20px;
+}
+
+.header .logo span {
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.nav {
+    display: flex;
+    gap: 25px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.nav a:hover {
+    color: #ffdd57;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle div {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+}
+
+.nav.active {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #203a43;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 20px 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+}
+
+
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(to bottom, #203a43, #2c5364);
+            color: white;
+        }
+
+        .hero img {
+            width: 150px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 25px;
+        }
+
+        .hero .cta-button {
+            padding: 15px 30px;
+            background-color: #ffdd57;
+            color: #333;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .hero .cta-button:hover {
+            background-color: #ffcc00;
+            transform: translateY(-5px);
+        }
+
+        .steps {
+            padding: 60px 20px;
+            background-color: #f0f2f5;
+        }
+
+        .steps h2 {
+            font-size: 28px;
+            margin-bottom: 30px;
+        }
+
+        .steps .step {
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 10px;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .steps .step:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .steps .step h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .steps .step p {
+            font-size: 16px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+            font-size: 16px;
+            color: #555;
+        }
+
+        .login-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .login-link a {
+            color: #0088ff;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .login-link a:hover {
+            color: #0056b3;
+        }
+
+        @media screen and (max-width: 1024px) {
+            .header {
+                padding: 15px 20px;
+            }
+        
+            .nav {
+                gap: 15px;
+            }
+        
+            .hero {
+                padding: 60px 20px;
+            }
+        
+            .hero h1 {
+                font-size: 32px;
+            }
+        
+            .hero p {
+                font-size: 18px;
+            }
+        
+            .steps h2 {
+                font-size: 24px;
+            }
+        
+            .steps .step {
+                margin: 15px 0;
+                padding: 15px;
+            }
+        
+            .steps .step h3 {
+                font-size: 20px;
+            }
+        
+            .steps .step p {
+                font-size: 14px;
+            }
+        }
+        
+        @media screen and (max-width: 768px) {
+            .header {
+                text-align: center;
+                padding: 15px;
+            }
+        
+            .nav {
+                flex-direction: column;
+                gap: 10px;
+                margin-top: 15px;
+            }
+        
+            .hero {
+                padding: 40px 20px;
+            }
+        
+            .hero h1 {
+                font-size: 28px;
+            }
+        
+            .hero p {
+                font-size: 16px;
+            }
+        
+            .steps .step {
+                padding: 12px;
+            }
+        
+            .steps .step h3 {
+                font-size: 18px;
+            }
+        
+            .steps .step p {
+                font-size: 14px;
+            }
+        }
+        
+        @media screen and (max-width: 480px) {
+            .header .logo span {
+                font-size: 18px;
+            }
+        
+            .hero h1 {
+                font-size: 24px;
+            }
+        
+            .hero p {
+                font-size: 14px;
+            }
+        
+            .hero .cta-button {
+                padding: 12px 25px;
+                font-size: 1rem;
+            }
+        
+            .steps .step {
+                padding: 10px;
+            }
+        
+            .steps .step h3 {
+                font-size: 16px;
+            }
+        
+            .steps .step p {
+                font-size: 12px;
+            }
+        
+            .nav a {
+                font-size: 16px;
+            }
+        }
