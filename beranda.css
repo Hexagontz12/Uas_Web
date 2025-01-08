@@ -121,13 +121,30 @@ body {
             border-radius: 5px;
             font-size: 1.2rem;
             cursor: pointer;
-            transition: background-color 0.3s, transform 0.3s;
+            transition: background-color 0.3s ease, transform 0.3s ease;
         }
-
+        
         .hero .cta-button:hover {
             background-color: #ffcc00;
             transform: translateY(-5px);
         }
+        
+        .back-button button {
+            padding: 15px 30px;
+            background-color: #ffdd57;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        
+        .back-button button:hover {
+            background-color: #ffcc00;
+            transform: translateY(-5px);
+        }
+        
 
         .steps {
             padding: 60px 20px;
